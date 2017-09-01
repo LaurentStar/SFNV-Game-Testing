@@ -1,0 +1,210 @@
+This file is for keeping track of all details about the development of this game. 
+
+DEVELOPER LOGS INFO
+
+ALPHA // Important detials
+BETA // Mildly important
+THEATA // To be continued or reminder
+KEETER // Prioty research
+EUCLID // secondary research
+DELTA // Powerful and great Gameplay ideas
+OMEGA // Ok Gameplay ideas
+ONXY // Talking or critical thinking.
+
+
+
+DEV_LOG #1: CLASS BETA: NAME BUTTON
+I've been comtemplating rather I should handle the double tap feature of button commands in the separate functions.
+I decided ultimately to make the double tap a feature of the button function. The new Button function will now 
+return value I like to call "HARDPRESS_VALUE". Hardpress simply mean the player push the same button twice in 
+a limit time span. This will easily allow the inclusion of the super smash brother dash style movement.   
+
+DEV_LOG #2: CLASS THEATA: NAME MOVESET
+Current controls are
+Movement: ARROW KEYS
+Jump: SPACEBAR
+Dash Movement: ARROW KEYS DOUBLE TAPPED
+Null Gravity (Testing purpose): Z 
+
+DEV_LOG #3: CLASS KEETER: NAME TYPE IDENTITY EVNVIROMENT
+Due to lack of knownledge I must attempt to code in a more barebones way. It is crucial I make sure I label my types 
+correctly. from 1 to 100 will be enviroment type, 101 - 200 will be interactive types, 201 - 300 will be Class B 
+interaction type, 301 - 400 will be extras. 
+
+DEV_LOG #4: CLASS ALPHA: NAME GAME OBJECTS
+After a long struggle I finally manage to program 80% of all the features I made in the previous build. Now
+I would like to reprogram the save pad. I decided to finalize my decision on having a lives base system where you'll
+be set back for losing all your lives. In order to give this meaning a new type of saving feature is needed.
+There will be two types of saving within my game. Save Stations and Save Pads. Save Station will give you real
+progression within the game saving on the ultima file. The ultima file will only be used when the player loses all their 
+lives sending them to where they last used a save station. The save pad will save the players progress but this could be 
+overwritten if the player loses all their lifes before saving at anohter save station. Save Station will be very large 
+decorative areas while save pad will be much smaller floating. All save point will come with a character switcher pad
+which can be used to switch out characters. Character switcher pad can appear by themselve for storyline and challege 
+purpose to prevent the player from switch to another character that would make certain areas too easy.
+
+Currently, there is much testing that must be done before moving on with this idea. ALSO VERY IMPORTANT......
+I MUST REORGANIZE THE LEVEL WRAPING CODE TO HAVE SEPARTED FUNCTIONS WRAP SPECIFIC LEVELS.....  This should keep \
+the code an estimate of 40% more organize down the road when connecting the hub worlds.    
+
+
+DEV_LOG #5: CLASS ONXY: GUILT TRIP
+It seem I've gotten cyron to test the performance of the game for me. This is great but I feel I may have 
+caused unneeded guilt from my comment about being dissapointed. The comment was meant to be ignored only 
+expressing my saddness at something unspecific. I take great pride in not being a whiny bitch and I refuse 
+to become one just because everyone keeps ignoring and rejecting my request. Next time I must do a better job at
+holding in my negative responses. My hardware and software must improve to be more independent, I cannot be weak......
+
+
+DEV_LOG #6: CLASS ALPHA: NAME GAME
+The interaction with the enviroment is okay but now my objects have gotten a bit complex and required more detail.
+I'm making a new function just for singling out these objects and interacting with them in their own unique special
+way. All I would need to do is fgure out the type of the object and I'm set.  
+
+
+DEV_LOG #7: CLASS THEATA: ,MENU PLANS
+The save feature is finally coming back and I have great plans for this. I decided to finally start using the gamemode
+value more to influence my game's behavior. I'm starting to think it's redudant but I feel I can make use of this 
+extra organizing. The menu will be a class that can save the player coordinates, locations, health, enegry,
+character being used, and completion progress. It will also feature a map and telescope view of the land. 
+Distress formally known as "mission" will still be included and "Quit" will reward the player for exiting the game 
+through the save pad.
+
+
+DEV_LOG #8: CLASS BETA: NAME THE HUNT!
+I've messed up the code something firce. One of my variables has been redifined in an unknown location in the game.
+I need to scan all of the code to find this illegal redifintion, i must have accidentally copy and pasted something
+somewhere. The hunt is on to find and destroy the sShadowFloatTileSheet variable. 
+
+
+DEV_LOG #9: 
+I was very worried about handling the collisions of 3D objects but the old code came equided to work within it's limits and account for this. 
+I wish I would have realized sooner. Ihaven't deleted much so I can somehow include that old code to make the collsion detection work goood
+again.
+
+
+DEV_LOG #10: CLASS ONXY: NEXT DESTINATION.
+I've come a long way since Dev log 9. I think that was recorded 9 months ago. Now my whole project uses polymorphism. This was needed for simplicity.
+Now I'm stuck with a few chores on my to do list. I remember wanting character switching for my game immediately. The next thing I'll work on
+is making this a reality. First Thing i'll need to do is fix up the save_pad menu. The next on screen config type to be added will be the Switch
+block. This won't be easy. I'll need to have the game remember who was being played last so file writing.....Yaaaaay!
+
+DEV_LOG #10: CLASS ONXY: NEXT DESTINATION.
+For some odd reason player number 120cxx keep getting selected when I exit the menu. It's so strange and weird but I'm going to tackle this problem next week morning
+I can almost feel the character switcher been done. 
+
+DEV_LOG #11  CLASS BETA:CLEAN UP WENT WELL
+I  tried to clean of the variables but I only managed to fix up a small portion relating to character objects. Oh well my code is pretty neat but 
+I think it could be neater. I still haven't even gotten rid of the dead weight functions. I know it's going to be a long process cleaning out
+this waste. Oh well I'm technically switching characters now. Maybe in the next 6 weeks I could have a new demo ready. 
+
+It's time to move on. Character switching is nearly complete. All I would need to do is synch the right resources but that comestic.
+I need to focus on the heavy stuff. My level gate objects did teleport me but I feel that previous test didn't go far enough. Let's 
+see how my methods who up when I load a new level and teleport myself somewhere in that environment. Thinking about that link object 
+idea seem hard. Maybe I can program the level editor to show me the exit coord of any gate object in any level I choose. I think I'll
+add a string object to the config class to have the ability to name the objects. I'm going to need more than numeric values to know 
+where it came and where it goes. 
+
+DEV_LOG #11  CLASS BETA: Optimizations and reoptimizations.
+The clean up for the save file read and write was a great success but it appears I might still have problems else. My new optimization
+technique is accessing data it shouldn't. This is due to new levels being loaded but the optimization variables not changing to match those levels
+Since the optimization functions are in limited locations this should be easy to fix monday. I'll simply reoptimize those varibles after each level
+load. Now i'm wondering where should I go next? I suppose I could reinclude the text editor. I got an amazing new idea for text objects.
+This might actually be my first time working with a linking object. Text objects will not only work standalone but some of them will
+have masters that they work with which will be regular objects. I can't wait to implement this. 
+
+DEV_LOG #12  CLASS BETA: Optimizations and reoptimizations Part 2.
+Everything should seem to work okay but I realized something was seriously wrong with my render optimization 
+
+
+DEV_LOG #13  CLASS KEETER: Bitmap slave
+Most of the old glitches are finally fixed but now it's time for an old feature that got lost in the rework. My text should be a bit 
+smarter and flexible this time around and thanks to my virtual system this is possible. Bitmap text objects are the strangest objects
+so far because they depend on other objects to be operational similar to the save pad but of an extreme degree. I was going to give every
+object that could utilized text it's own slave Bitmap text object but this is wasteful. I've decided to make about 20 bitmap Slave objects
+that works for many masters. This will be the first use of master + slave system which means...... I don't like the name master + slave.
+I got to come up with a more plesent name. Maybe Terrorist leader and child soilder a much better name for this relationship. The bitmap
+child soilder does want to work because it's the only thing it knowns. I'll start this project in fully force when classes end because it's 
+kinda important. Wonder what I should do in the mean time?????? I'll work on 120CXX sprite battle with Ys so I can at least have some stuff 
+ready for the next demo. 
+
+DEV_LOG #14  CLASS THEATA: Collision detection forgotten war
+Collision detection still isn't fixed 100%. I can't collide with object from the side despite having the code to do so.
+I wanted to clear up more small problems before I programmed my bitmap text so this bug and the ones related to the old version
+of my code should be easy to clear up before I begin this.
+
+DEV_LOG #15  CLASS THEATA: Linked objects, the new links
+Collision detection round 3 was a failure and success. Hopefully one day I will figure this out. Now I'm working on linking objects
+together. I've already defined so much but I need more to realize the potential and innovation. I just to remember that linked objects
+aren't just interacting, they're two separate with one actively manipulating the other in a direct fashion. 
+
+DEV_LOG #16  CLASS BETA: Fully functional
+Alot has been done but more is needed. I sill don't have all the old features I included in the old build despite having so much more.
+ I'm going to try and reprogram the health system as well as the Damage. Hopefully this goes somewhere. If this goes smoothly I'll be 
+ one more step closer to having all the old functions back. Let see, Text, Collision, Gauages, Menu, Saving, Level Warping, ect. So
+ enemies, health, damage, and special reaction are all about left.  
+
+DEV_LOG #17  CLASS ALPHA: Clean up duty.
+I think it's time for a clean up. The code has gotta really sloppy lately and I would like to make it neater.
+
+DEV_LOG #18  CLASS ALPHA: Object difference and standardization
+A long time ago I decided to standardized my objects. They all had a core element that was comment despite being difference in 
+usage, calculation, and ect. As of today 10/1/2016 I've found a small critical error. My float enivornment objects aren't at it's core the
+same as character objects. I will begin correcting this problem soon to make them more compatable and consistance in the physic calculation.
+
+
+
+DEV_LOG #19  CLASS BETA: Retooling
+The link chain object type works successfully but I don't really untilize it like I intended. Most of the work is done by a 
+local function that bearly needs the chain link object. I'll begin giving this object more importants before moving on the programming 
+the hitbox type to be capable of using it as intended. 
+
+DEV_LOG #19  CLASS BETA: Retooling prt 2
+The issue lies deep with the master objects instead of slaves. It seem masters are not actively giving out order and never let slave be free.
+I will need a way to figure the type of slave the master want, as well as making the master set slave free when not in use. 
+
+DEV_LOG #20  CLASS ONXY: The pieces come together
+I've made my final decision. Since there are many types of objects I've decided to leave the handling of pool object up to game type classes
+Even the calculation for calling pool classes will be done in the game classes. Special function will be made in abandunce to keep it simple.
+These classes will work similar to the physics class. It will gather info from the objects and do what it must accordingly. Most likely 
+for the hit objects it will use coordinate to place hitboxs. Regular object will no longer need to worry about slaves, they will be managed
+by the game classes and applied at their disgresion. New variables will be created to allow the game classes to calculate. Linking will only be
+used for convience and optimization
+
+DEV_LOG #21  CLASS ONXY: Edts and errors
+I've gotten it to work again but the slaves aren't  being freed. Apperently slave will be freed in two instances. When the master doesn't need them
+and when I switch game modes. I'm making a general slave freeing function for the game modes. It look like I might have to make pairs of function for 
+ordering the slave around and checking for when they are no longer needed. 
+
+DEV_LOG #22  CLASS ONXY: The master hides so good they can't find themselves.
+Appearently master objects don't know their addresses. this put a big hinderance on my project. I'll assigne them an address if they dont know it
+
+
+DEV_LOG #23  CLASS ONXY: The conditional operator have broken. If and while do not work
+Damn it, the final conditions for me slave freer function aren't working. The variables say they are true so why won't they 
+check the condition to free the slave. 
+
+DEV_LOG #24  CLASS ONXY: Logical error only works 4 times. 
+I have a strange error where my program only works 4 times. I've decided to draw out the process to completely eliminate this problem. 
+After this is fixed I may need to adjusted some functions for logic consistancy but all should be well. 
+
+DEV_LOG #25  CLASS ONXY: Master and slave addresses
+The master and slave address shouldn't be changing so much. Only the dummy variables should change. I'm going to set them in
+the internal config class to fix this permentantly. 
+
+DEV_LOG #26  CLASS THEATA: Break time
+Making an AI has been hard. First I need to perfect the pool style object functions to allow it to attack
+However just getting the logic together has been a pain. I'm taking a break now to work on the web site and andriod game
+Hopefully After this I wil reach my stopping point of making an AI and work on the blaze game
+
+Right now I need to do 2 thing when I get back from this break. I need to work on dumb AI and come up with a way for it to attack correctly. 
+
+
+DEV_LOG #27  CLASS THEATA: Testing 1 23
+I'm doing testing now on AI logic. Creating a dumb AI requires me to make spawn points and I'm not in the mood to make this.
+I'm going to try adding new logic to the Smart AI athoguht it would be technically acting like a dumb AI. I'll keep note that this is only
+a test.  
+
+DEV_LOG #28 CLASS THETA
+I'm un-able to tell where I left off. I guess I'll need to set new goals. I still I'm going to focus on dumb AI and spawning them. I'll spawn them and 
+perform simple logic. I'm ready to get back into the action but this wil only be done at school. 

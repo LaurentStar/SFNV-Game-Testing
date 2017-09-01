@@ -1,0 +1,12 @@
+CHROME CRYSTAL
+//A Docile cyrstal humanoid looking creature that maintains and fixes the world. The chrome crystal become aggressive when attacked and 
+attempts to tackle the player. Dies in 2 hits and is very weak. Each Chrome Cystal might charge at different speeds to stop the player
+from predicting it easily. Sometimes the chrome crytal will fake out it's attacks to trick the player into striking early leaving them 
+vunerable to counter attacks. If the player attack a chrome cyrstal near other crytals and it is alone, it will search the level for 
+other crytsal and gather a party, later on these crystal will ambush the player with a new and improved synergy algorithm to work together
+to effectivly  eliminate the target with minimal causality. 
+
+CHROME CRYSTAL MASTER GRAY
+The Master of the chrome crystals in the gray domain. Capable of speech and congitive abilties. Can summons random Chrome crystals to attack.
+Attacks when the area is attempted to reset or when it wittness a chrome crystal death. 
+
